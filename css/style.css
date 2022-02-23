@@ -1,4 +1,4 @@
-body::after {
+/*body::after {
     content: "";
     display: block;
     width: 1660px;
@@ -9,7 +9,7 @@ body::after {
     left: calc(50% - 830px);
     opacity: 0.6;
     z-index: 999;
-  }
+  }*/
   *{
     margin: 0;
     padding: 0;
@@ -18,14 +18,14 @@ body::after {
   
   @font-face {
     font-family: "Open-Sans-reg";
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+    src: url("../fonts/OpenSans-Regular.woff");
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: "Open-Sans-bol";
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+    src: url("../fonts/OpenSans-Bold.woff");
     font-weight: 700;
     font-style: bold;
   }
@@ -37,15 +37,18 @@ body::after {
   }
   
   .header-page {
-    padding: 28px 230px 122px 230px;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+    max-width: 1660px;
+    background-image: url("../images/banner-bg.jpg");
     background-repeat: no-repeat;
-    /*background-position: center center;*/
+    background-position: center center;
     background-size: cover;
     background-color: #000000;
+    padding: 28px 230px 122px;
     position: relative;
-    z-index:0;
+    z-index: 0;
     text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
     }
   
   .header-page:after {
@@ -61,7 +64,6 @@ body::after {
   }
   
   .container {
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,7 +82,9 @@ body::after {
     display: flex;
     margin-right: 0;
   }  
-  
+  .burger-menu{
+    display: none;
+  }
   .menu-header-list {
     display: flex;
     list-style: none;
@@ -108,12 +112,287 @@ body::after {
     color: #ffffff;
     font-size: 45px;
   }
+
+
+  /*===========POPUP==========*/
+
+._hidden{
+  visibility: hidden;
+}
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(105, 105, 105, 0.8);
+  /*background-size: 100%;*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.popup-content {
+  max-width: 390px;
+  /*max-height: 590px;*/
+  position: relative;
+  background: #ffffff;
+  opacity: 2;
+  padding: 50px 30px;
+}
+
+.popup-title{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: Open-Sans-bol, Arial, Sans-serif;
+  text-align: center;
+}
+
+.popup-title::after {
+  content:"";
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  width: 66px;
+  height: 3px;
+  background:#b59f5b;
+}
+
+.popup-close {
+  position: absolute;
+  background: url("../svg/form-x.svg");
+  top: -26px;
+  right: 0px;
+  width: 18px;
+  height: 18px;
+}
+
+/*===POPUP-cross
+.popup-close:before,
+.popup-close:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 24px;
+    height: 3px;
+    background: #e62f57;
+}
+.popup-close:before {
+  webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.popup-close:after {
+  webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}*/
+.feedback-form {
+  margin-top: 30px;
+}
+.select-label {
+  font-size: 14px;
+}
+.select {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  margin-top: 10px;
+  border: 1px solid #f4f6f5;
+  background-color: #f3f7f6;
+  font-size: 16px;
+  font-family: Arial,sans-serif;
+  appearance: none;
+  background-image: url("../svg/form-arrows.svg");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position-x: calc(100% - 13px);
+  background-position-y: center;
+  color: #828483;
+}
+
+.feedback-select {
+  margin-top: 30px;
+}
+.select-hint {
+  font-size: 14px;
+}
+.radio-group-text::before {
+  content: "";
+  background-image: url("../svg/form-empty-circle.svg");
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-position: center center;
+  background-size: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.feedback-radio:checked ~ .radio-group-text::before {
+  background-image: url("../svg/form-circle.svg");
+}
+
+.feedback-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.feedback-radio-items {
+  margin-top: 10px;
+}
+
+.feedback-textarea {
+  margin-top: 30px;
+}
+.textarea-hint {
+  font-size: 14px;
+}
+
+.textarea {
+  min-width: 330px;
+  max-width: 330px;
+  min-height: 130px;
+  max-height: 170px;
+  font-family: inherit;
+  padding: 20px 20px;
+  margin-top: 10px;
+  background-color: #f3f7f6;
+  color: #828483;
+}
+
+.feedback-button {
+  width: 100%;
+  height: 3.125rem;
+  border: none;
+  color: white;
+  background-color: #b59f5b;
+  text-transform: uppercase;
+  margin-top: 1.56rem;
+  cursor: pointer;
+}
+
+
+
+  /*===========TRENDS=============*/
+
+  .trends {
+    width: 100%;
+    max-width: 1660px;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;*/
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 60px;
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+  }
+  .trends-top {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Open-Sans-bol, Arial, Sans-serif;
+    text-align: center;
+  }
+  .trends-top::after{
+    content:"";
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    width: 66px;
+    height: 3px;
+    background:#b59f5b;  
+  }
+  .trends-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+
+.trend-item {
+  width: 24.8%;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*.Border {
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(181, 159, 91);
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.6;
+  position: absolute;
+  left: 13px;
+  top: 725px;
+  width: 375px;
+  height: 151px;
+  z-index: 385;
+}*/
+
+
+.trend-item-box {
+  min-height: 150px;
+  padding-top: 35px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  border: 3px solid #b59f5b;
+}
+
+.trend-link {
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Open-Sans-bol, Arial, Sans-serif;
+  color: white;
+  line-height: 1.3;
+}
+
+.trend-item1 {
   
+  background-image: url("../images/trend1.jpg");
+}
+.trend-item2 {
+  
+  background-image: url("../images/trend2.jpg");
+}
+.trend-item3 {
+  
+  background-image: url("../images/trend3.jpg");
+}
+.trend-item4 {
+  
+  background-image: url("../images/trend4.jpg");
+}
+
+/*.trend-name {
+  display: block;
+}*/
+
   
     /*============MAIN==============*/
   
   .page-wrap {
-    width: 1200px;
+    max-width: 1200px;
     display: flex;
     padding-top: 60px;
     padding-left: 15px;
@@ -124,7 +403,8 @@ body::after {
     justify-content: space-between;
   }
   .main {
-    width: 780px;
+  max-width: 65%;
+  min-width: 47%;
   }
   
   .news {
@@ -137,19 +417,19 @@ body::after {
   }
   
   .news-img {
-    width: 380px;
+    max-width: 100%;
     display: block;
   }
   
   .img-main {
-    width: 380px;
+    max-width: 100%;
   }
   
   .news-description {
-      display: block;
-      width: 370px;
-      margin-left: 30px;
-    }
+    display: block;
+    max-width: 370px;
+    margin-left: 4%;
+  }
   
   .news-tegs {
     list-style: none;
@@ -173,7 +453,6 @@ body::after {
   .news-name {
     font-family: Open-Sans-bol, Arial, Sans-serif;
     text-transform: uppercase;
-   
     font-size: 20px;
     margin-bottom: 23px;
   }
@@ -308,7 +587,7 @@ body::after {
     width: 50px;
     height: 50px;
     border: none;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-image: url("../svg/search.svg");
     background-repeat: no-repeat;
     background-size: 20px;
     background-position-x: center;
@@ -374,8 +653,8 @@ body::after {
     margin-left: 0px;
     padding-top: 5px;
     padding-right: 10px;
-    padding-bottom: 0px;
-    padding-left: 12px;
+    padding-bottom: 5px;
+    padding-left: 10px;
     border: 3px solid #eeeeee;
   }
   
@@ -425,12 +704,153 @@ body::after {
     font-family: Open-Sans-bol, Arial, Sans-serif;
     text-decoration: none;
   }
+  /*========PRODUCTS=========*/
+  .our-products {
+    max-width: 1200px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .products-top {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Open-Sans-bol, Arial, Sans-serif;
+  }
   
-  
+  .products-top::after {
+    content:"";
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 66px;
+    height: 3px;
+    background:#b59f5b;  
+  }
+
+  .products-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .product-item-box1  {
+    width: 21.25em;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+  }
+   .image-item1 {
+    width: 100%;
+    min-height: 12.5em;
+    background-image: url(../images/shop-item-desk1.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    
+  }
+  .image-item2 {
+    width: 100%;
+    min-height: 12.5em;
+    background-image: url(../images/shop-item-desk2.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+   
+  }
+  .image-item3 {
+    width: 100%;
+    
+    min-height: 12.5em;
+    background-image: url(../images/shop-item-desk3.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    
+  }
+
+   .product-name {
+    padding-top: 20px;
+    outline:  3px solid #b59f5b;
+    outline-offset: 20px;
+    text-align: left;
+    flex-grow: 1;
+  }
+
+  .product-link {
+    font-size: 1.375em;
+    text-decoration: none;
+    color: black;
+    font-family: Open-Sans-bol, Arial, Sans-serif;
+    text-transform: uppercase;
+    
+  }
+
+  p {
+    font-size: 0.9em;
+    font-family: Open-Sans-reg, Arial, Sans-serif;
+    
+    
+  }
+  .link-here {
+    color: #b59f5b;
+    text-decoration: none;
+  }
+  .product-price {
+    display: flex;
+    flex-direction: column;
+  }
+  .with-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  .old-price {
+    font-size: 0.9em;
+    font-family: Open-Sans-reg, Arial, Sans-serif;
+    color: rgb(15, 13, 14);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.714;
+  }
+  .old-price2 {
+    color: #ffffff;
+    text-decoration: line-through;
+  }
+  .old-price3 {
+    text-decoration: line-through;
+  }
+  .new-price {
+    font-size: 1.375em;
+    font-family: Open-Sans-reg, Arial, Sans-serif;
+    color: rgb(15, 13, 14);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  .store-button {
+    min-width: 140px;
+    min-height: 50px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: #b59f5b;
+    }
+
+  .store-button:hover {
+    background-color: #828483;
+  } 
+
   /*=====FOOTER=====*/
   
   .footer {
-    width: 1200px;
+    max-width: 1200px;
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
@@ -464,7 +884,7 @@ body::after {
   .icon-twitter {
     width: 25px;
     height: 25px;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
+    background-image: url("../svg/004-twitter.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
@@ -474,7 +894,7 @@ body::after {
   .icon-priterest {
     width: 25px;
     height: 25px;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
+    background-image: url("../svg/001-pinterest.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
@@ -484,7 +904,7 @@ body::after {
   .icon-facebook {
     width: 25px;
     height: 25px;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
+    background-image: url("../svg/002-facebook-logo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
@@ -494,7 +914,7 @@ body::after {
   .icon-instagram {
     width: 25px;
     height: 25px;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
+    background-image: url("../svg/005-instagram.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
@@ -504,7 +924,7 @@ body::after {
   .icon-tumblr {
     width: 25px;
     height: 25px;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+    background-image: url("../svg/003-tumblr.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
@@ -517,3 +937,414 @@ body::after {
     color: rgb(153, 153, 153);
     font-weight: bold;
   }
+/*=======MEDIA-POPUP-1201px=========*/
+@media (width: 1201px) {
+
+}
+
+  /*=========MEDIA-641px-1119px=========  */
+
+@media (min-width: 641px) and (max-width: 1119px) {
+
+  .header-page {
+   /* display: none;*/
+    padding: 25px 35px 120px;
+    background-image: url("../images/banner-bg-tablet.jpg");
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
+    background-size: cover;
+    background-color: #000000;
+    position: relative;
+    z-index:0;
+    text-transform: uppercase;
+    }
+  
+  .header-page:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  .container {
+    display: none;
+    max-width: 1119px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 100px;
+   }
+  
+  .logo {
+    width: 160px;
+  }
+  
+  .menu-header {
+    
+    display: flex;
+    margin-right: 0;
+  }  
+  .burger-menu {
+    display: block;
+    width: 21px;
+    height: 21px;
+    position: relative;
+    flex: 0 0 21px;
+  }
+  .burger-menu::before, .burger-menu::after {
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0px;
+  }
+ .burger-menu::before {
+    top: 0px;
+  }
+  .burger-menu::after {
+    bottom: 0px;
+  }
+  .burger-menu span {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: #ffffff;
+    left: 0px;
+    top: 9px;
+  }
+  .menu-header-list { 
+    display: none;
+    list-style: none;
+  }
+    
+ 
+  
+  .title {
+    width: 600px;
+    font-size: 38px;
+    text-align: center;
+    line-height: 1.5;
+    vertical-align: bottom;
+    padding-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: Open-Sans-bol, Arial, Sans-serif;
+    color: #ffffff;
+    
+  }
+  /*========TRENDS-641px-1119px=========*/
+  .trends {
+    max-width: 768px;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;*/
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 60px;
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+  }
+  .trends-wrap {
+    flex-wrap: wrap;
+  }
+  .trend-item {
+    width: calc(100%/2.05);
+    height: 64.65%;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+  }
+  .trend-item:nth-child(odd) {
+    margin-right: 4px;
+  }
+
+
+  /*=========MAIN========*/
+  .page-wrap {
+    max-width: 1119px;
+    display: flex;
+    padding-top: 60px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 51px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+  }
+  .news {
+    flex-direction: column;
+  }
+  .news-description {
+    
+    margin-left: 0px;
+  }
+  .news:not(:last-child) {
+    border-bottom: 3px solid #eeeeee;
+  }
+ 
+  .news:nth-child(n+2) {
+    margin-top: 40px;
+  }
+  /*============PRODUCTS==========*/
+  .our-products{
+    padding: 0 35px 20px;
+   }
+  .products-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  .product-item-box1 {
+    width: 21.25em;
+    display: flex;
+    flex-direction: column;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 23px;
+    margin-bottom: 30px;
+}
+.footer-wrap {
+  margin-bottom: 50px;
+}
+}
+/*=========MEDIA MAX-WiDTH: 640PX========*/
+
+@media (max-width: 640px) /*and (orientation: portrait)*/ {
+
+/*.trend-item {
+  visibility: hidden;
+}*/
+
+.header-page {
+  background-image: url("../images/banner-bg-tablet.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  position: relative;
+  z-index:0;
+  text-transform: uppercase;
+  padding: 0px 0px 220px;
+}
+.container {
+  flex-direction: column-reverse;
+  margin-bottom: 35px;
+  padding: 0;
+}
+.header-page:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: -1;
+}
+.logo {
+  width: 270px;
+  margin-top: 175px;
+}
+
+.menu-header {
+  display: none;
+}  
+ .burger-menu {
+   display: block;
+   width: 21px;
+   height: 21px;
+   position: relative;
+   flex: 0 0 0px;
+   margin: 30px 15px 0 20px;
+
+ }
+.burger-menu::before, .burger-menu::after {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0px;
+}
+.burger-menu::before {
+  top: 0px;
+}
+.burger-menu::after {
+  bottom: 0px;
+}
+.burger-menu span {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background-color: #ffffff;
+  left: 0px;
+  top: 9px;
+}
+.menu-header-list { 
+  display: none;
+  list-style: none;
+}
+  
+
+ 
+.title {
+  max-width: 270px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+  vertical-align: bottom;
+  margin-top: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Open-Sans-bol, Arial, Sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.trends {
+  max-width: 360px;
+  align-items: center;
+  padding-top: 40px;
+}
+.trends-wrap {
+  max-width: 360px;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+}
+.trend-item:not(:last-child) {
+margin-bottom: 4px;
+}
+.trend-item {
+  width: 100%;
+}
+.page-wrap {
+  max-width: 360px;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 40px;
+}
+.main {
+  max-width: 100%;
+  min-width: 47%;
+  margin-bottom: 40px;
+}
+.news {
+  flex: none;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #eeeeee;
+}
+.news:nth-child(n+2) {
+  margin-top: 35px;
+}
+.news-description {
+  margin-left: 0;
+}
+.new-posts {
+  width: 100%;
+}
+.news-teg-link {
+  font-size: 10px;
+}
+.news-name {
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+.date {
+  font-size: 8px;
+  margin-right: 14px;
+}
+.author {
+  font-size: 8px;
+}
+.text {
+  font-size: 10px;
+  margin-top: 20px;
+}
+.line-margin-text {
+  margin-bottom: 10px;
+}
+.new:nth-child(n+3) {
+  margin-top: 15px;}
+
+.aside-search {
+  margin-top: 55px;
+}
+.aside-subscribe {
+  margin-top: 45px;
+}
+.top::after {
+  
+  margin-top: 15px;
+}
+.aside-tegs {
+  margin-top: 45px;
+}
+
+.search-group {
+  flex-grow: 1;
+}
+.field-search {
+  width: 100%;
+}
+.tegs-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 20px;
+}
+.tegs-item {
+  font-size: 8px;
+  padding: 5px 15px;
+  margin-right: 5px;
+}
+.our-products {
+  max-width: 360px;
+}
+
+
+.products-wrap {
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+}
+.product-item-box1 {
+  padding-bottom: calc(20px + 3px);
+}
+.image-item1 {
+  /*width: 286px;
+  min-height: 12.5em;
+  background-image: url(../images/shop-item-desk1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  align-items: center;*/
+
+}
+
+.footer {
+  max-width: 360px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+}
