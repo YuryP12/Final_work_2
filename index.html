@@ -7,12 +7,56 @@
     <title>Final_work_2</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<div class="popup _hidden">
+  <div class="popup-content">
+    <a href="#0" class="popup-close"></a>
+    <div class="popup-title">ваш фидбек</div>
+    <form class="feedback-form">
+     
+        <div class="feedback-select">
+          <div class="form-group">
+            <label class="select-group">
+              <span class="select-label">Как часто вы заходите на сайт?</span>
+              <select class="select">
+                <option value="almost-every-day" selected>Почти каждый день</option>
+                <option value="once-per-month">Раз в месяц</option>
+              </select>
+            </label>
+          </div>
+        </div>
+     
+      <section class="feedback-select">
+        <span class="select-hint">Вы подписаны на e-mail рассылку?</span>
+        <div class="feedback-radio-items">
+        <label>
+          <input type="radio" class="feedback-radio" name="radio-group">
+          <span class="radio-group-text">Да</span>
+        </label>
+        <label>
+          <input type="radio" class="feedback-radio" name="radio-group">
+          <span class="radio-group-text">Нет</span>
+        </label>
+      </div>
+      </section>
+
+      <section class="feedback-textarea">
+        <span class="textarea-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+        <textarea class="textarea" placeholder="Может, больше рецептов?"></textarea>
+      </section>
+     
+        <button class="feedback-button" type="submit">отправить</button>
+      
+    </form>   
+  </div>
+</div>
+
     <header class="header-page">
         <div class="container">
           <a href="#0"> 
-            <img src="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg" class="logo" alt="logo-noemi"> 
+            <img src="svg/noemi-logo.svg" class="logo" alt="logo-noemi"> 
           </a>
+
           <nav class="menu-header">
             <ul class="menu-header-list">
               <li class="menu-header-list-item">
@@ -35,15 +79,78 @@
               </li>
             </ul>
           </nav>
+          <div class="burger-menu">
+            <span></span>
+          </div>
         </div>        
               <h1 class="title">блог о творчестве, спорте, и образе жизни</h1>
-      </header>
-    
-        <div class="page-wrap">
-          <main class="main">
+    </header>
+
+    <aside class="trends">
+          <h2 class="trends-top">сейчас в тренде</h2>
+          <div class="trends-wrap">
+            <div class="trend-item trend-item1">
+              <div class="trend-item-box">
+                <ul class="news-tegs">
+                  <li class="news-teg-item">
+                    <a class="news-teg-link" href="#0">lifestyle</a>
+                  </li>
+                  <li class="news-teg-item">
+                    <a class="news-teg-link" href="#0">interior</a>
+                  </li>
+                </ul>
+                <div class="trend-name">
+                  <a class="trend-link" href="#0">сейчас в тренде: сад на подоконнике</a>
+                </div>
+              </div>
+            </div> 
+            <div class="trend-item trend-item2">
+              <div class="trend-item-box">
+                <div class="news-tegs">
+                  <a class="news-teg-link" href="#0">food</a>
+                </div>
+                <div class="trend-name">
+                  <a class="trend-link" href="#0">сыры на красивых картинках из интернета: какие они на вкус?</a>
+                </div>
+              </div>
+            </div>
+            <div class="trend-item trend-item3">
+              <div class="trend-item-box">
+                <ul class="news-tegs">
+                  <li class="news-teg-item">
+                    <a class="news-teg-link" href="#0">lifestyle</a>
+                  </li>
+                  <li class="news-teg-item">
+                    <a class="news-teg-link" href="#0">travel</a>
+                  </li>
+                </ul>
+                <div class="trend-name">
+                <a class="trend-link" href="#0">собираемся в первый поход в горы</a>
+                </div>
+              </div>
+            </div>
+            <div class="trend-item trend-item4">
+              <div class="trend-item-box">
+                <ul class="news-tegs">
+                  <li class="news-teg-item">
+                    <a class="news-teg-link" href="#0">food</a>
+                  </li>
+                  <li class="news-teg-item">
+                    <a class="news-teg-link" href="#0">health</a>
+                  </li>
+                </ul>
+                <div class="trend-name">
+                  <a class="trend-link" href="#0">сейчас в тренде: сколько витамина с в лимонах?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </aside>
+    <div class="page-wrap">
+      <main class="main">
               <article class="news news_alignment_1">
                  <a class="news-img" href="#0">
-                  <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" width="380" class="img-main" alt="coast-man-rock">
+                  <img src="images/last-post1.jpg" width="380" class="img-main" alt="coast-man-rock">
                 </a>
                 <div class="news-description">
                   <ul class="news-tegs">
@@ -72,7 +179,7 @@
     
               <article class="news news_alignment_2">
                 <a class="news-img" href="#0">
-                  <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post2.jpg" width="380" class="img-main" alt="yoga-on-the-beach">
+                  <img src="images/last-post2.jpg" width="380" class="img-main" alt="yoga-on-the-beach">
                 </a>
                 <div class="news-description news-description_alignment_2">
                   <ul class="news-tegs">
@@ -101,7 +208,7 @@
               
               <article class="news news_alignment_3">
                 <a class="news-img" href="#0">
-                  <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post3.jpg" width="380" class="img-main" alt="music-concert">
+                  <img src="images/last-post3.jpg" width="380" class="img-main" alt="music-concert">
                 </a>
                 <div class="news-description news-description_alignment_2">
                   <ul class="news-tegs">
@@ -127,7 +234,7 @@
     
               <article class="news news_alignment_4">
                 <a class="news-img" href="#0">
-                  <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" width="380" class="img-main" alt="table-with-food">
+                  <img src="images/last-post4.jpg" width="380" class="img-main" alt="table-with-food">
                 </a>
                 <div class="news-description news-description_alignment_4">
                   <ul class="news-tegs">
@@ -155,7 +262,7 @@
     
               <article class="news news_alignment_5">
                 <a class="news-img" href="#0">
-                  <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post5.jpg" width="380" class="img-main" alt="pinted-pilow">
+                  <img src="images/last-post5.jpg" width="380" class="img-main" alt="pinted-pilow">
                 </a>
                 <div class="news-description news-description_alignment_5">
                   <ul class="news-tegs">
@@ -183,65 +290,9 @@
                   </div>
                 </div>
               </article>
-    
-              <article class="news news_alignment_6">
-                <a class="news-img" href="#0">
-                  <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post6.jpg" width="380" class="img-main" alt="cliff-researchers">
-                </a>
-                <div class="news-description news-description_alignment_6">
-                  <ul class="news-tegs">
-                    <li class="news-teg-item">
-                      <a class="news-teg-link" href="#0">travel</a>
-                    </li>
-                    <li class="news-teg-item">
-                      <a class="news-teg-link" href="#0">lifestyle</a>
-                    </li>
-                  </ul>
-    
-                  <div class="news-text">
-                    <h2 class="news-name">
-                      <a class="news-link" href="#0">как первый раз отправиться в горы?</a>
-                    </h2>
-                    <div class="news-text-meta">
-                      <time class="date">10 июня 2019</time>
-                      <span class="author">Неизвестный автор</span>
-                    </div>
-                    <div class="text text_alignment_6">
-                      <p>Для начала нужно определиться в каком формате пройдет ваше путешествие. Это зависит от многих факторов, не только от ваших желаний и интересов.</p>
-                  </div>
-                </div>
-              </article>
-    
-              <article class="news news_alignment_7">
-                <a class="news-img" href="#0">
-                  <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" width="380" class="img-main" alt="table-with-food">
-                </a>
-                <div class="news-description">
-                  <ul class="news-tegs">
-                    <li class="news-teg-item">
-                      <a class="news-teg-link" href="#0">lifestyle</a>
-                    </li>
-                    <li class="news-teg-item">
-                      <a class="news-teg-link" href="#0">food</a>
-                    </li>
-                  </ul>
-    
-                  <div class="news-text">
-                    <h2 class="news-name">
-                      <a class="news-link" href="#0">наукоемкий подход к кулинарии</a>
-                    </h2>
-                    <div class="news-text-meta">
-                      <time class="date">10 июня 2019</time>
-                      <span class="author">Неизвестный автор</span>
-                    </div>
-                    <div class="text text_alignment_7">
-                      <p>Узнаем основы к поектированию новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
-                  </div>
-                </div>
-              </article>
-          </main>
+      </main>
                 
-            <aside class="new-posts">
+      <aside class="new-posts">
               <section class="aside-item new-posts">
                 <h3 class="top" class="new-top">Новые посты</h3>
                 
@@ -384,9 +435,68 @@
                       </li>
                     </ul>
               </section>
-            </aside>
+      </aside>
+    </div>
+
+<div class="our-products">
+  <h2 class="products-top">наши изделия</h2>
+  
+  <div class="products-wrap">
+    <div class="product-item-box1">
+      <div class="image-item1" alt="pinted-pilow"> 
+      </div>
+      <div class="product-name">
+        <a class="product-link" href="#0">подушки на диван</a>
+        <p>Набор из двух подушек с модными принтами. Видео о создании <a class="link-here" href="#0">здесь</a>.</p>
+      <div class="with-button">
+        <div class="product-price">
+          <span class="old-price">1000 ₽</span>
+          <span class="new-price">800 ₽</span>
         </div>
-      
+        <form action="https://netology.ru">
+          <button class="store-button">в магазин</button>
+        </form>
+      </div>
+      </div>
+    </div>
+    <div class="product-item-box1">
+      <div class="image-item2" alt="pinted-pilow"> 
+      </div>
+      <div class="product-name">
+        <a class="product-link" href="#0">кукла «зайчик»</a>
+        <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="link-here" href="#0">весенняя серия простов</a> в блоге и несколько подкастов.</p>
+      <div class="with-button">
+        <div class="product-price">
+          <span class="old-price2">000 ₽</span>
+          <span class="new-price">3500 ₽</span>
+        </div>
+        <form action="https://netology.ru">
+          <button class="store-button">в магазин</button>
+        </form>
+      </div>
+      </div>
+    </div>
+    <div class="product-item-box1">
+      <div class="image-item3" alt="pinted-pilow"> 
+      </div>
+      <div class="product-name">
+        <a class="product-link" href="#0">шестиугольная рамка</a>
+        <p>Необычная рамка для украшения дома из видео <a class="link-here" href="#0">«Как сделать рамку из подручных средств за 30 минут»</a> в блоге и несколько подкастов.</p>
+      <div class="with-button">
+        <div class="product-price">
+          <span class="old-price3">500 ₽</span>
+          <span class="new-price">400 ₽</span>
+        </div>
+        <form action="https://netology.ru">
+          <button class="store-button">в магазин</button>
+        </form>
+      </div>
+      </div>
+    </div>
+
+    
+</div>
+</div>
       <footer class="footer">
         <div class="footer-wrap">
             <address class="socials">
