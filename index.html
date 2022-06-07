@@ -49,11 +49,10 @@
   </div>
 
   <header class="header-page">
-    <div class="container">
+    <div class="container-header">
       <a href="#0"> 
         <img src="svg/noemi-logo.svg" class="logo" alt="logo-noemi"> 
       </a>
-
       <nav class="menu-header">
         <ul class="menu-header-list">
           <li class="menu-header-list-item">
@@ -82,6 +81,7 @@
     </div>        
     <h1 class="title">блог о творчестве, спорте, и образе жизни</h1>
   </header>
+
   <div class="general-wrapper">
     <aside class="trends">
       <h2 class="trends-top">сейчас в тренде</h2>
@@ -106,7 +106,7 @@
             <div class="news-tegs">
               <a class="news-teg-link" href="#0">food</a>
             </div>
-              <h3 class="trend-name trend-link" href="#0">сыры на красивых картинках из интернета: какие они на вкус?</h3>
+            <h3 class="trend-name trend-link" href="#0">сыры на красивых картинках из интернета: какие они на вкус?</h3>
           </div>
         </div>
         <div class="trend-item trend-item3">
@@ -134,13 +134,12 @@
                 <a class="news-teg-link" href="#0">health</a>
               </li>
             </ul>
-            <div class="trend-name">
-              <h3 class="trend-link" href="#0">сейчас в тренде: сколько витамина с в лимонах?</h3>
-            </div>
+            <h3 class="trend-link trend-name" href="#0">сейчас в тренде: сколько витамина с в лимонах?</h3>
           </div>
         </div>
       </div>
     </aside>
+
     <div class="page-wrap">
       <main class="main">
         <article class="news news_alignment_1">
@@ -156,7 +155,6 @@
                 <a class="news-teg-link" href="#0">health</a>
               </li>
             </ul>
-
             <div class="news-text">
               <h2 class="news-name">
                 <a class="news-link" href="#0">10 мест, ради которых стоит проснуться на рассвете</a>
@@ -286,6 +284,7 @@
           </div>
         </article>
       </main>
+
       <aside class="new-posts">
         <section class="aside-item new-posts">
           <h3 class="top" class="new-top">Новые посты</h3>
@@ -432,13 +431,13 @@
       </aside>
     </div>
 
-    <div class="our-products">
+    <aside class="our-products">
       <h2 class="products-top">наши изделия</h2>
-      
       <div class="products-wrap">
+
         <div class="product-item-box">
           <div class="image-item-products1 image-item1">
-            <picture>
+            <picture class="image-products">
               <source media="(min-width: 1200px)" 
               srcset="images/shop-item-desk1.jpg">
               <source media="(min-width: 641px) and (max-width: 1199px),
@@ -447,11 +446,11 @@
               <source
               media="(max-width: 640px)"
               srcset="images/shop-item-mobile1.jpg">
-              <img src="images/shop-item-desk1.jpg" alt="pinted-pilow">
+              <img class="product-img" src="images/shop-item-desk1.jpg" alt="pinted-pilow">
             </picture>
           </div>
           <div class="product-name">
-            <a class="product-link" href="#0">подушки на диван</a>
+            <h3 class="product-link" href="#0">подушки на диван</h3>
             <p>Набор из двух подушек с модными принтами. Видео о создании <a class="link-here" href="#0">здесь</a>.</p>
           <div class="with-button">
             <div class="product-price">
@@ -464,6 +463,7 @@
           </div>
           </div>
         </div>
+
         <div class="product-item-box">
           <div class="image-item-products2 image-item2"> 
             <picture>
@@ -475,11 +475,11 @@
               <source
               media="(max-width: 640px)"
               srcset="images/shop-item-mobile2.jpg">
-              <img src="images/shop-item-desk2.jpg" alt="plush_hare">
+              <img class="product-img" src="images/shop-item-desk2.jpg" alt="plush_hare">
             </picture>
           </div>
           <div class="product-name">
-            <a class="product-link" href="#0">кукла «зайчик»</a>
+            <h3 class="product-link" href="#0">кукла «зайчик»</h3>
             <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="link-here" href="#0">весенняя серия простов</a> в блоге и несколько подкастов.</p>
           <div class="with-button">
             <div class="product-price">
@@ -492,6 +492,7 @@
           </div>
           </div>
         </div>
+
         <div class="product-item-box">
           <div class="image-item-products3 image-item3"> 
             <picture>
@@ -503,11 +504,11 @@
               <source
               media="(max-width: 640px)"
               srcset="images/shop-item-mobile3.jpg">
-              <img src="images/shop-item-desk3.jpg" alt="hexagonal_frame">
+              <img class="product-img" src="images/shop-item-desk3.jpg" alt="hexagonal_frame">
             </picture>
           </div>
           <div class="product-name">
-            <a class="product-link" href="#0">шестиугольная рамка</a>
+            <h3 class="product-link" href="#0">шестиугольная рамка</h3>
             <p>Необычная рамка для украшения дома из видео <a class="link-here" href="#0">«Как сделать рамку из подручных средств за 30 минут»</a> в блоге и несколько подкастов.</p>
           <div class="with-button">
             <div class="product-price">
@@ -520,10 +521,8 @@
           </div>
           </div>
         </div>
-
-        
-    </div>
-    </div>
+      </div>
+    </aside>
     <footer class="footer">
       <div class="footer-wrap">
           <address class="socials">
