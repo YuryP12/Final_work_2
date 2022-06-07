@@ -395,7 +395,7 @@ MAIN==============*/
   padding-bottom: 51px;
   margin-right: auto;
   margin-left: auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .main {
