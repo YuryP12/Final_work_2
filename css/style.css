@@ -1,128 +1,131 @@
 /*body::after {
-    content: "";
-    display: block;
-    width: 1660px;
-    height: 3207px;
-    background-image: url("https://raw.githubusercontent.com/netology-code/html-2-diploma/master/sources/NOEMI_Modern_ru.jpg");
-    position: absolute;
-    top: 0;
-    left: calc(50% - 830px);
-    opacity: 0.6;
-    z-index: 999;
-  }*/
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-  
-  @font-face {
-    font-family: "Open-Sans-reg";
-    src: url("../fonts/OpenSans-Regular.woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "Open-Sans-bol";
-    src: url("../fonts/OpenSans-Bold.woff");
-    font-weight: 700;
-    font-style: bold;
-  }
-  
-  body {
-   font-family: Open-Sans-reg, sans-serif;
-   font-size: 16px;
-   margin: 0px;
-  }
-  
-  .header-page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../images/banner-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: #000000;
-    padding: 28px 230px 122px;
-    position: relative;
-    z-index: 0;
-    text-transform: uppercase;
-    align-items: center;
-  }
-  
-  .header-page:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.6;
-    z-index: -1;
-  }
-  
-  .container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 100px;
-  }
-  
-  .logo {
-    width: 180px;
-    margin: auto;
-  }
-  
-  .menu-header {
-    display: flex;
-    margin-right: 0;
-  }  
-  .burger-menu{
-    display: none;
-  }
-  .menu-header-list {
-    display: flex;
-    list-style: none;
-  }
-    
-  .menu-header-list-item:nth-child(n+2) {
-    margin-left: 35px;
-  }
-  
-  .menu-item {
-    text-decoration: none;
-    font-size: 13px;
-    color: #ffffff;  
-    font-family: Open-Sans-reg, Arial, Sans-serif;  
-  }
-  
-  .title {
-    width: 700px;
-    text-align: center;
-    line-height: 1.7;
-    padding-top: 0px;
-    font-family: Open-Sans-bol, Arial, Sans-serif;
-    color: #ffffff;
-    font-size: 45px;
+  content: "";
+  display: block;
+  width: 1660px;
+  height: 3207px;
+  background-image: url("https://raw.githubusercontent.com/netology-code/html-2-diploma/master/sources/NOEMI_Modern_ru.jpg");
+  position: absolute;
+  top: 0;
+  left: calc(50% - 830px);
+  opacity: 0.6;
+  z-index: 999;
+}*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   }
 
+@font-face {
+  font-family: "Open-Sans-reg";
+  src: url("../fonts/OpenSans-Regular.woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  /*===========POPUP==========*/
+@font-face {
+  font-family: "Open-Sans-bol";
+  src: url("../fonts/OpenSans-Bold.woff");
+  font-weight: 700;
+  font-style: bold;
+}
+
+body {
+  font-family: Open-Sans-reg, sans-serif;
+  font-size: 16px;
+  margin: 0px;
+}
+
+.header-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  padding: 28px 230px 122px;
+  position: relative;
+  z-index: 0;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.header-page:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.container-header {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 100px;
+}
+
+.logo {
+  width: 180px;
+  margin: auto;
+}
+
+.menu-header {
+  display: flex;
+  margin-right: 0;
+}  
+.burger-menu{
+  display: none;
+}
+.menu-header-list {
+  display: flex;
+  list-style: none;
+}
+  
+.menu-header-list-item:nth-child(n+2) {
+  margin-left: 35px;
+}
+
+.menu-item {
+  text-decoration: none;
+  font-size: 13px;
+  color: #ffffff;  
+  font-family: Open-Sans-reg, Arial, Sans-serif;  
+}
+
+.title {
+  width: 700px;
+  text-align: center;
+  line-height: 1.7;
+  padding-top: 0px;
+  font-family: Open-Sans-bol, Arial, Sans-serif;
+  color: #ffffff;
+  font-size: 45px;
+}
+
+
+/*=========== 
+POPUP ==========*/
 
 ._hidden {
  visibility: hidden;
 }
+
 .popup-wrap {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: rgba(105, 105, 105, 0.8);
+  background: rgba(32, 32, 32, 0.8);
   top: 0;
   left: 0;
   right: 0;
@@ -138,7 +141,6 @@
   background: #ffffff;
   opacity: 2;
   padding: 3.125em 1.875em;
-  /*padding: 50px 30px;*/
   margin: auto;
 }
 
@@ -170,7 +172,7 @@
   height: 18px;
 }
 
-/*===POPUP-cross
+/*======= POPUP-cross =======
 
 .popup-close:before,
 .popup-close:after {
@@ -194,9 +196,11 @@
 .feedback-form {
   margin-top: 30px;
 }
+
 .select-label {
   font-size: 14px;
 }
+
 .select {
   display: inline-block;
   box-sizing: border-box;
@@ -220,9 +224,11 @@
 .feedback-select {
   margin-top: 30px;
 }
+
 .select-hint {
   font-size: 14px;
 }
+
 .radio-group-text::before {
   content: "";
   background-image: url("../svg/form-empty-circle.svg");
@@ -255,6 +261,7 @@
   flex-direction: column;
   margin-top: 30px;
 }
+
 .textarea-hint {
   font-size: 14px;
 }
@@ -287,7 +294,8 @@
 }
 
 
-/*===========TRENDS=============*/
+/*=========== 
+TRENDS =============*/
 
 .trends {
   width: 100%;
@@ -331,7 +339,8 @@
   background-color: #000000;
 }
 
-.trend-item-box1, .trend-item-box2, .trend-item-box3, .trend-item-box4 {
+.trend-item-box1, .trend-item-box2, 
+.trend-item-box3, .trend-item-box4 {
   position: relative;
   min-height: 150px;
   padding-top: 35px;
@@ -350,9 +359,11 @@
   color: white;
   line-height: 1.3;
 }
-.trend-photo1, .trend-photo2, .trend-photo3, .trend-photo4 {
-  max-width: 100%;
-  min-height: 100%;
+
+.trend-photo1, .trend-photo2, 
+.trend-photo3, .trend-photo4 {
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -362,16 +373,18 @@
 .trend-item1 {
   border-right: 2px solid #fff;
 }
+
 .trend-item2 {
   border-right: 2px solid #fff;
 }
+
 .trend-item3 {
   border-right: 2px solid #fff;
 }
 
 
-  
-    /*============MAIN==============*/
+/*============ 
+MAIN==============*/
   
 .page-wrap {
   max-width: 1200px;
@@ -382,8 +395,9 @@
   padding-bottom: 51px;
   margin-right: auto;
   margin-left: auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
+
 .main {
   max-width: 65%;
   min-width: 47%;
@@ -401,10 +415,6 @@
 .news-img {
   max-width: 100%;
   display: block;
-}
-
-.img-main {
-  max-width: 100%;
 }
 
 .news-description {
@@ -438,6 +448,7 @@
   font-size: 20px;
   margin-bottom: 23px;
 }
+
 .news-link {
   text-decoration: none;
   color: black;
@@ -469,7 +480,8 @@
 }
 
   
-    /*======Aside=======*/
+    /*======== 
+    ASIDE =======*/
   
   .new-posts{
     width: 270px;
@@ -539,7 +551,8 @@
 }
 
 
-/*===========SEARCH==========*/
+/*=========== 
+SEARCH ==========*/
   
 .aside-search {
   margin-top: 55px;
@@ -577,7 +590,8 @@
 }
   
   
-/*********E-MAIL********/
+/*========= 
+E-MAIL =========*/
   
 .aside-subscribe {
   margin-top: 58px;
@@ -598,6 +612,7 @@
   font-size: 14px;
   color:  white;
 }
+
 .field-subscribe {
   width: 100%;
   height: 50px;
@@ -612,7 +627,8 @@
 }
   
   
-  /*****ASIDE-TAGS*****/
+/*=========== 
+ASIDE-TAGS =========*/
   
 .aside-tegs {
   margin-top: 55px;
@@ -647,7 +663,8 @@
 }
   
   
-/**********THEMES*********/
+/*===========
+THEMES===============*/
   
 .themes {
   margin-top: 50px;
@@ -686,7 +703,10 @@
   text-decoration: none;
 }
 
-/*==========PRODUCTS============*/
+
+/*========== 
+PRODUCTS============*/
+
 .our-products {
   max-width: 1200px;
   margin-top: 0;
@@ -697,6 +717,7 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .products-top {
   text-align: center;
   font-size: 20px;
@@ -721,9 +742,15 @@
   display: flex;
   justify-content: space-between;
 }
+
 picture {
   margin: 0 0;
 }
+
+.product-img {
+  width: 100%;
+}
+
 .product-item-box  {
   width: 21.25em;
   display: flex;
@@ -752,15 +779,18 @@ picture {
   color: #b59f5b;
   text-decoration: none;
 }
+
 .product-price {
   display: flex;
   flex-direction: column;
 }
+
 .with-button {
   display: flex;
   justify-content: space-between;
   margin-top: 25px;
 }
+
 .old-price {
   font-size: 0.9em;
   font-family: Open-Sans-reg, Arial, Sans-serif;
@@ -769,13 +799,16 @@ picture {
   text-transform: uppercase;
   line-height: 1.714;
 }
+
 .old-price2 {
   color: #ffffff;
   text-decoration: line-through;
 }
+
 .old-price3 {
   text-decoration: line-through;
 }
+
 .new-price {
   font-size: 1.375em;
   font-family: Open-Sans-reg, Arial, Sans-serif;
@@ -784,6 +817,7 @@ picture {
   text-transform: uppercase;
   line-height: 1.2;
 }
+
 .store-button {
   min-width: 140px;
   min-height: 50px;
@@ -798,7 +832,8 @@ picture {
 } 
 
 
-/*========FOOTER========*/
+/*======== 
+FOOTER========*/
   
 .footer {
   max-width: 1200px;
@@ -890,9 +925,11 @@ picture {
 }
 
 
-/*============MEDIA-641px-1199px=========  */
+/*============MEDIA-641px-1199px
+(orientation: landscape) and (max-width: 640px)=========*/
 
-@media (min-width: 641px) and (max-width: 1199px), (orientation: landscape) and (max-width: 640px) {
+@media (min-width: 641px) and (max-width: 1199px),
+ (orientation: landscape) and (max-width: 640px) {
 
   ._hidden {
     visibility: hidden;
@@ -900,26 +937,12 @@ picture {
    
   .popup-content {
     max-width: 20.625em;
-    
-    /*position: relative;
-    background: #ffffff;
-    opacity: 2;
-    padding: 3.125em 1.875em;
-    
-    margin: auto;*/
   }
 
   .header-page {
    /* display: none;*/
     padding: 25px 35px 120px;
     background-image: url("../images/banner-bg-tablet.jpg");
-    /*background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: #000000;
-    position: relative;
-    z-index:0;
-    text-transform: uppercase;*/
   }
   
   .header-page:after {
@@ -934,7 +957,7 @@ picture {
     z-index: -1;
   }
   
-  .container {
+  .container-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -951,10 +974,10 @@ picture {
   }
   
   .menu-header {
-    
     display: flex;
     margin-right: 0;
   }  
+
   .burger-menu {
     display: block;
     width: 21px;
@@ -962,6 +985,7 @@ picture {
     position: relative;
     flex: 0 0 21px;
   }
+
   .burger-menu::before, .burger-menu::after {
     content: "";
     background-color: #ffffff;
@@ -970,12 +994,15 @@ picture {
     height: 3px;
     left: 0px;
   }
+
  .burger-menu::before {
     top: 0px;
   }
+
   .burger-menu::after {
     bottom: 0px;
   }
+
   .burger-menu span {
     width: 100%;
     height: 3px;
@@ -984,6 +1011,7 @@ picture {
     left: 0px;
     top: 9px;
   }
+
   .menu-header-list { 
     display: none;
     list-style: none;
@@ -1001,22 +1029,16 @@ picture {
     font-family: Open-Sans-bol, Arial, Sans-serif;
     color: #ffffff;
   }
-  /*========TRENDS-641px-1199px=========*/
+  
+  /*========
+  TRENDS-641px-1199px=========*/
 
   .trends {
-    max-width: 768px;
-    /*display: flex;
-    justify-content: space-between;
-    align-items: center;*/
     margin-right: auto;
     margin-left: auto;
     padding-top: 60px;
-    /*padding-left: 15px;
-    padding-right: 15px;*/
   }
-  .trends-wrap {
-    flex-wrap: wrap;
-  }
+ 
   .trend-item {
     width: 50%;
     height: 64.65%;
@@ -1026,24 +1048,38 @@ picture {
  
 
 
-  /*=========MAIN========*/
+  /*=========
+  MAIN========*/
+
   .page-wrap {
-    max-width: 1199px;
-    display: flex;
-    padding-top: 60px;
-    padding-left: 35px;
+    max-width: 768px;
     padding-right: 35px;
-    padding-bottom: 51px;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: space-between;
+    padding-left: 35px;
   }
+
+  .main {
+    width: 100%;
+    margin-right: 40px;
+  }
+
+  .news-img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .img-main {
+    width: 100%;
+  }
+
   .news {
     flex-direction: column;
   }
+
   .news-description {
     margin-left: 0px;
+    max-width: 100%;
   }
+  
   .news:not(:last-child) {
     border-bottom: 3px solid #eeeeee;
   }
@@ -1052,18 +1088,21 @@ picture {
     margin-top: 40px;
   }
 
-  /*============PRODUCTS 641px-1199px==========*/
+
+  /*============ 
+  PRODUCTS 641px-1199px ==========*/
 
   .our-products{
     padding: 0 35px 20px;
    }
+
   .products-wrap {
     display: flex;
     flex-wrap: wrap;
   }
   
   .product-item-box {
-    width: 21.25em;
+    width: 49%;
     display: flex;
     flex-direction: column;
     padding-left: 23px;
@@ -1072,15 +1111,29 @@ picture {
     margin-bottom: 30px;
   }
 
+  .image-products {
+    width: 100%;
+  }
+
+ 
+  /*============
+  FOOTER 641px-1199px==========*/
+
+  .footer {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
   .footer-wrap {
     margin-bottom: 50px;
   }
 }
 
-  /*=========MEDIA MAX-WiDTH: 640PX========*/
+  /*=========
+  MEDIA MAX-WiDTH: 640PX========*/
+
 @media (max-width: 640px) {
   
-
   ._hidden {
   visibility: hidden;
   }
@@ -1089,6 +1142,7 @@ picture {
     max-width: 20.625em;
     padding: 30px 30px;
   }
+
   .popup-title {
     font-size: 1px;
   }
@@ -1103,12 +1157,14 @@ picture {
     z-index:0;
     padding: 0px 0px 220px;
   }
-  .container {
+
+  .container-header {
     flex-direction: column-reverse;
     align-items: center;
     margin-bottom: 35px;
     padding: 0;
   }
+
   .header-page:after {
     content: "";
     position: absolute;
@@ -1120,6 +1176,7 @@ picture {
     opacity: 0.6;
     z-index: -1;
   }
+
   .logo {
     width: 270px;
     margin-top: 175px;
@@ -1128,6 +1185,7 @@ picture {
   .menu-header {
     display: none;
   }  
+
   .burger-menu {
     display: block;
     width: 21px;
@@ -1135,8 +1193,8 @@ picture {
     position: relative;
     flex: 0 0 0px;
     margin: 30px 15px 0 auto;
-
   }
+
   .burger-menu::before, .burger-menu::after {
     content: "";
     background-color: #ffffff;
@@ -1145,12 +1203,15 @@ picture {
     height: 3px;
     left: 0px;
   }
+
   .burger-menu::before {
     top: 3px;
   }
+
   .burger-menu::after {
     bottom: 0px;
   }
+
   .burger-menu span {
     width: 100%;
     height: 3px;
@@ -1159,6 +1220,7 @@ picture {
     left: 0px;
     top: 9px;
   }
+
   .menu-header-list { 
     display: none;
     list-style: none;
@@ -1177,23 +1239,28 @@ picture {
     color: #ffffff;
     text-transform: uppercase;
   }
+
   .trends {
     max-width: 360px;
     align-items: center;
     padding-top: 40px;
   }
+
   .trends-wrap {
     max-width: 360px;
     flex: none;
     flex-direction: column;
     align-items: center;
   }
+
   .trend-item:not(:last-child) {
   margin-bottom: 2px;
   }
+
   .trend-item {
     width: 100%;
   }
+
   .page-wrap {
     max-width: 360px;
     flex: none;
@@ -1204,63 +1271,78 @@ picture {
     padding-right: 15px;
     padding-bottom: 40px;
   }
-  /*========== MAX-WiDTH: 640PX MAIN=========*/
-  
 
+
+  /*========== 
+  MAX-WiDTH: 640PX MAIN=========*/
+  
   .main {
     max-width: 100%;
     min-width: 47%;
     margin-bottom: 40px;
   }
+
   .news {
     flex: none;
     flex-direction: column;
     padding-bottom: 20px;
     border-bottom: 3px solid #eeeeee;
   }
+
   .news:nth-child(n+2) {
     margin-top: 35px;
   }
+
   .news-description {
     margin-left: 0;
   }
+
   .new-posts {
     width: 100%;
   }
+
   .news-teg-link {
     font-size: 14px;
   }
+
   .news-name {
     font-size: 12px;
     margin-bottom: 24px;
   }
+
   .date {
     font-size: 8px;
     margin-right: 14px;
   }
+
   .author {
     font-size: 8px;
   }
+
   .text {
     font-size: 10px;
     margin-top: 20px;
   }
+
   .line-margin-text {
     margin-bottom: 10px;
   }
+
   .new:nth-child(n+3) {
     margin-top: 15px;}
 
   .aside-search {
     margin-top: 55px;
   }
+
   .aside-subscribe {
     margin-top: 45px;
   }
+
   .top::after {
-    
     margin-top: 15px;
   }
+
   .aside-tegs {
     margin-top: 45px;
   }
@@ -1268,34 +1350,42 @@ picture {
   .search-group {
     flex-grow: 1;
   }
+
   .field-search {
     width: 100%;
   }
+
   .tegs-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     margin-top: 20px;
   }
+
   .tegs-item {
     font-size: 10px;
     padding: 5px 15px;
     margin-right: 5px;
   }
+
   .our-products {
     max-width: 360px;
   }
 
-  /*============PRODUCTS MAX-WiDTH: 640PX==========*/
+  /*========= 
+  PRODUCTS MAX-WiDTH: 640PX==========*/
+
   .products-wrap {
     flex: none;
     flex-direction: column;
     align-items: center;
   }
+
   .product-item-box {
     width: 100%;
     padding-bottom: calc(20px + 3px);
   }
+
   .product-item-box:not(:last-child) {
     margin-bottom: 27px;
   }
@@ -1303,6 +1393,7 @@ picture {
   .our-products {
     padding-bottom: 73px;
   }
+
   .image-item-products {
     min-height: 285px;
   }
@@ -1310,9 +1401,11 @@ picture {
   .image-item3 {
     margin: 0;
   }
+
   .product-link {
     font-size: 18px;
   }
+
   .footer {
     max-width: 360px;
     margin-top: 0;
@@ -1323,6 +1416,7 @@ picture {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .footer-wrap {
     margin-bottom: 50px;
   }
