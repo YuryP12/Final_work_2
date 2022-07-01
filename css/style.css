@@ -800,18 +800,18 @@ picture {
   line-height: 1.714;
 }
 
-.old-price2 {
-  color: #ffffff;
-  text-decoration: line-through;
+.old-price2 {  
+  color: #ffffff;  
 }
 
-.old-price3 {
+.old-price3, .old-price2 {
+  font-family: Open-Sans-bol, Arial, Sans-serif;
   text-decoration: line-through;
 }
 
 .new-price {
   font-size: 1.375em;
-  font-family: Open-Sans-reg, Arial, Sans-serif;
+  font-family: Open-Sans-bol, Arial, Sans-serif;
   color: rgb(15, 13, 14);
   font-weight: bold;
   text-transform: uppercase;
@@ -1240,6 +1240,9 @@ FOOTER========*/
     text-transform: uppercase;
   }
 
+  /*======= 
+  MAX-WiDTH: 640PX TRENDS ========*/
+
   .trends {
     max-width: 360px;
     align-items: center;
@@ -1261,6 +1264,18 @@ FOOTER========*/
     width: 100%;
   }
 
+  .trend-item1 {
+    border-right: 0px;
+  }
+  
+  .trend-item2 {
+    border-right: 0px;
+  }
+  
+  .trend-item3 {
+    border-right: 0px;
+  }
+
   .page-wrap {
     max-width: 360px;
     flex: none;
@@ -1272,9 +1287,10 @@ FOOTER========*/
     padding-bottom: 40px;
   }
 
+  
 
   /*========== 
-  MAX-WiDTH: 640PX MAIN=========*/
+  MAX-WiDTH: 640PX MAIN =========*/
   
   .main {
     max-width: 100%;
@@ -1297,7 +1313,7 @@ FOOTER========*/
     margin-left: 0;
   }
 
-  .new-posts {
+  .new-posts, .img-main {
     width: 100%;
   }
 
