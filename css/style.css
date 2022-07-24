@@ -70,7 +70,7 @@ body {
   max-width: 1200px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 100px;
@@ -78,6 +78,10 @@ body {
 
 .logo {
   width: 180px;
+  
+}
+
+.logo-link {
   margin-right: auto;
 }
 
@@ -906,7 +910,7 @@ FOOTER========*/
 /*============MEDIA-641px-1199px
 (orientation: landscape) =========*/
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+@media (min-width: 641px) and (max-width: 1199px) {
 
  /*._hidden {
     visibility: hidden;
@@ -1177,6 +1181,10 @@ MEDIA MAX-WiDTH: 640PX========*/
     background-color: #000000;
     opacity: 0.6;
     z-index: -1;
+  }
+  
+  .logo-link {
+    margin-right: 0px;
   }
 
   .logo {
