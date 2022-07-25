@@ -910,7 +910,7 @@ FOOTER========*/
 /*============MEDIA-641px-1199px
 (orientation: landscape) =========*/
 
-@media (min-width: 641px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
 
  /*._hidden {
     visibility: hidden;
@@ -1129,10 +1129,11 @@ FOOTER========*/
 
 
 @media  (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+ 
   .trend-item {
     width: 25%;
-
   }
+
   .news-description {
     max-width: 100%;
   }
