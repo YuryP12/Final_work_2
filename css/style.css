@@ -413,7 +413,8 @@ MAIN==============*/
 }
 
 .news-teg-item {
-  margin-right: 20px;
+  margin-right: calc(5px + 12 * (100vw / 1200));
+  /*margin-right: 20px;*/
 }
 
 .news-teg-link {
@@ -1061,7 +1062,8 @@ FOOTER========*/
   }
 
   .news-teg-link {
-    font-size: 20px;
+    font-size: calc(14px + 1 * (100vw / 770));
+    /*font-size: 20px;*/
   }
 
   .news-description {
