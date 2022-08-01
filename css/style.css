@@ -908,9 +908,9 @@ FOOTER========*/
 
 
 /*============MEDIA-641px-1199px
-(orientation: landscape) =========*/
+(orientation: portrait) =========*/
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+@media (min-width: 641px) and (max-width: 1199px) {
 
  /*._hidden {
     visibility: hidden;
@@ -1014,7 +1014,7 @@ FOOTER========*/
   /*========
   TRENDS-641px-1199px=========*/
 
-  .trends {
+ /* .trends {
     margin-right: auto;
     margin-left: auto;
     padding-top: 60px;
@@ -1030,7 +1030,7 @@ FOOTER========*/
 
   .trend-item1, .trend-item2 {
     border-bottom: 3px solid #fff;
-  }
+  }*/
 
 
   /*=========
@@ -1125,18 +1125,26 @@ FOOTER========*/
     margin-bottom: 50px;
   }
 }
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+  
+ .trends {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 60px;
+  }
 
+  .trend-item:nth-child(even) {
+    border-right: none;
+  }
 
-
-@media  (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
- 
   .trend-item {
-    width: 25%;
+    width: 50%;
   }
 
-  .news-description {
-    max-width: 100%;
+  .trend-item1, .trend-item2 {
+    border-bottom: 3px solid #fff;
   }
+
 }
 
 
